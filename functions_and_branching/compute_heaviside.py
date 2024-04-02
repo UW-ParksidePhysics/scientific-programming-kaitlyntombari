@@ -16,5 +16,4 @@ if __name__ == '__main__':
   print(f'H(0) = {result3}')
   print(f'H(10-15) = {result4}')
   print(f'H(10) = {result5}')
-
-
+  
