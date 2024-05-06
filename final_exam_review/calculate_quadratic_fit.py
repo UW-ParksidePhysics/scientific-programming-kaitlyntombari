@@ -18,6 +18,7 @@ def calculate_quadratic_fit(data:np.ndarray) -> np.ndarray:
     quadratic_coefficients = np.polyfit(x_data, y_data, 2)
     return quadratic_coefficients
 
+
 if __name__ == "__main__":
     data = np.array([np.linspace(-1,1), np.linspace(-1,1) ** 2])
     try:

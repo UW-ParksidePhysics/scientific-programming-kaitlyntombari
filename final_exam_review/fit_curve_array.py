@@ -32,3 +32,4 @@ if __name__ == "__main__":
         print(fit_curve)
     except (ArithmeticError, IndexError) as e:
         print(e)
+      

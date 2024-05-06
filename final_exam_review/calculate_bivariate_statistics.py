@@ -7,6 +7,7 @@ __Kaitlyn Tombari__
 import numpy as np
 from scipy import stats
 
+
 def calculate_bivariate_statistics(data: np.ndarray) -> np.ndarray:
     """Function used to calculate the statistical characteristics of a data set."""
     if data.shape[0] != 2 or data.shape[1] <= 1:
