@@ -1,0 +1,20 @@
+{
+  "files": {
+    "array_computing_and_curve_plotting/fill_gaussian_lists.py": [
+      {
+        "id": "e828af98-b40e-43ba-b330-7f539ad211a3",
+        "line": 1,
+        "version": 186,
+        "index": 0
+      }
+    ],
+    "project.py": [
+      {
+        "id": "ba9671b2-d129-4c81-9882-747546837393",
+        "line": 1,
+        "version": 500,
+        "index": 0
+      }
+    ]
+  }
+}

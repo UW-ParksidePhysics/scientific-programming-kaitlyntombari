@@ -1,40 +1,53 @@
-"""Newton's Cradle demonstrates physics concepts through a series of swinging spheres, where momentum and kinetic energy are transferred from one end to the other in a pendulum motion. In this simulation of Newton's Cradle, functions are used to calculate the angle of the string, the angular velocity of the spheres, and the potential and kinetic energy transferred all over an interval of time. Values for the simulation time, mass of the spheres, and the length of the string are chosen and used in these functions. The script utilizes the NumPy and Matplotlib libraries to model and visualize the swinging spheres. Three plots are created to visulize the results of the simulation: "Angle vs. Time", "Angular Velocity vs. Time", and "Energy vs. Time"."""
+"""Newton's Cradle demonstrates physics concepts through a series of swinging \
+spheres, where momentum and kinetic energy are transferred from one end to the other \
+in a pendulum motion. In this simulation of Newton's Cradle, functions are used to \
+calculate the angle of the string, the angular velocity of the spheres, and the \
+potential and kinetic energy transferred all over an interval of time. Values for \
+the simulation time, mass of the spheres, and the length of the string are chosen and \
+used in these functions. The script utilizes the NumPy and Matplotlib libraries to \
+model and visualize the swinging spheres. Three plots are created to visulize the \
+results of the simulation: "Angle vs. Time", "Angular Velocity vs. Time", and \
+"Energy vs. Time"."""
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 from scipy.constants import g as gravitational_acceleration
 
 
-"""Function used to calculate the angle of the string at a certain time."""
 def calculate_angle(time, string_length):
+    """Function used to calculate the angle of the string at a certain time."""
     pendulum_frequency = np.sqrt(gravitational_acceleration / string_length)
     string_angle = (np.pi / 4) * np.cos(pendulum_frequency * time)
     return string_angle
 
 
-"""Function used to calculate the angular velocity of the pendulum at a certain time."""
 def calculate_angular_velocity(time, string_length):
+    """Function used to calculate the angular velocity of the pendulum at a certain \
+    time."""
     pendulum_frequency = np.sqrt(gravitational_acceleration / string_length)
     angular_speed = (-np.pi / 4) * np.sin(pendulum_frequency * time) * pendulum_frequency
     return angular_speed
 
 
-"""Function used to calculate kinetic energy at a certain time."""
 def calculate_kinetic_energy(time, ball_mass, string_length):
+    """Function used to calculate kinetic energy at a certain time."""
     angular_speed = calculate_angular_velocity(time, string_length)
     kinetic_energy = 0.5 * ball_mass * (string_length ** 2) * (angular_speed ** 2)
     return kinetic_energy
 
 
-"""Function used to calculate potential energy at a certain time."""
 def calculate_potential_energy(time, ball_mass, string_length):
+    """Function used to calculate potential energy at a certain time."""
     string_angle = calculate_angle(time, string_length)
-    potential_energy = ball_mass * gravitational_acceleration * string_length * (1 - np.cos(string_angle))
+    potential_energy = ball_mass * gravitational_acceleration * string_length \
+  * (1 - np.cos(string_angle))
     return potential_energy
 
 
-"""Function used to simulate the motion of Newton's Cradle and visualize the angle, angular velocity, kinetic energy, and potential energy over a period of time."""
 def simulate_newtons_cradle():
+    """Function used to simulate the motion of Newton's Cradle and visualize the \
+    angle, angular velocity, kinetic energy, and potential energy over a period of \
+    time."""
     # Define parameters
     maximum_time = 3  # Maximum time for simulation (s)
     ball_mass = 0.2  # kg
@@ -61,8 +74,10 @@ def simulate_newtons_cradle():
     angular_velocity_values = pendulum_values[:, 1]
 
     # Calculate kinetic and potential energy over time
-    kinetic_energy_values = np.array([calculate_kinetic_energy(t, ball_mass, string_length) for t in times])
-    potential_energy_values = np.array([calculate_potential_energy(t, ball_mass, string_length) for t in times])
+    kinetic_energy_values = np.array([calculate_kinetic_energy(t, ball_mass, \
+    string_length) for t in times])
+    potential_energy_values = np.array([calculate_potential_energy(t, ball_mass, \
+    string_length) for t in times])
 
     # Create plots
     plt.figure()
@@ -100,3 +115,4 @@ def simulate_newtons_cradle():
 
 if __name__ == "__main__":
     simulate_newtons_cradle()
+  
