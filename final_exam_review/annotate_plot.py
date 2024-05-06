@@ -4,6 +4,7 @@ __Kaitlyn Tombari__
 """
 
 from datetime import datetime
+
 import matplotlib.pyplot as plt
 
 

@@ -20,6 +20,7 @@ def plot_data_with_fit(data: np.ndarray, fit_curve: np.ndarray, data_format: str
     plt.legend(['Data', 'Fit']) 
     return [data_plot, fit_plot] 
 
+
 if __name__ == "__main__":
     data = np.array([[-2, -2, 0, 1, 2], [4, 1, 0, 1, 4]])
     fit_curve = np.array([np.linspace(-2, 2), np.linspace(-2, 2) ** 2])
