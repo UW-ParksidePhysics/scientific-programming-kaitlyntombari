@@ -1,8 +1,9 @@
-"""Fit a quadratic polynomial to a two row NumPy array of x-y data using NumPy's \
-polynomial class polyfit() method.
-
-__Kaitlyn Tombari__
 """
+Fit a quadratic polynomial to a two row NumPy array of x-y data using NumPy's \
+polynomial class polyfit() method.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import numpy as np
 

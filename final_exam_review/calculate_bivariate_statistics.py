@@ -1,8 +1,9 @@
-"""Calculate statistical characteristics of a data set using SciPy's stats.describe \
-function.
-
-__Kaitlyn Tombari__
 """
+Calculate statistical characteristics of a data set using SciPy's stats.describe \
+function.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import numpy as np
 from scipy import stats

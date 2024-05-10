@@ -1,7 +1,8 @@
-"""Annotate a plot using Pyplot's text function.
-
-__Kaitlyn Tombari__
 """
+Annotate a plot using Pyplot's text function.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 from datetime import datetime
 

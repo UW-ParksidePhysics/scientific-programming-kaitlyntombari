@@ -1,7 +1,8 @@
-"""Read in two columns of data from a text file of arbitrary length.
-
-__Kaitlyn Tombari__
 """
+Read in two columns of data from a text file of arbitrary length.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import numpy as np
 

@@ -1,8 +1,9 @@
-"""Execute each module which contains a standalone test in its if \
-__name__ == "__main__": block
-
-__Kaitlyn Tombari__
 """
+Execute each module which contains a standalone test in its if \
+__name__ == "__main__": block
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 
 modules = ['read_two_columns_text', 'calculate_bivariate_statistics', \

@@ -1,8 +1,9 @@
-"""Create a combined scatter and curve plot for the data and the fit polynomial, \
-respectively, using Pyplot's plot function.
-
-__Kaitlyn Tombari__
 """
+Create a combined scatter and curve plot for the data and the fit polynomial, \
+respectively, using Pyplot's plot function.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import matplotlib.pyplot as plt
 import numpy as np

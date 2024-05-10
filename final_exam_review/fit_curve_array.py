@@ -1,8 +1,9 @@
-"""Make fit curve using fit polynomial coefficients, NumPy's polynomial, and minimum \
-and maximum x-values.
-
-__Kaitlyn Tombari__
 """
+Make fit curve using fit polynomial coefficients, NumPy's polynomial, and minimum \
+and maximum x-values.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import numpy as np
 

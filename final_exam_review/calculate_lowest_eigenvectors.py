@@ -1,8 +1,9 @@
-"""Identify eigenvectors with smallest K eigenvalues given input matrix using \
-NumPy's eig function.
-
-__Kaitlyn Tombari__
 """
+Identify eigenvectors with smallest K eigenvalues given input matrix using \
+NumPy's eig function.
+"""
+
+__author__ = "Kaitlyn Tombari"
 
 import numpy as np
 
