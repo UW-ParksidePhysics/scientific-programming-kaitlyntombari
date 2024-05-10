@@ -1,5 +1,5 @@
 """
-This script reads data from a file, fits a specified functional form to the data, and \
+SCRIPT NOT FINISHED (I emailed you about it): This script reads data from a file, fits a specified functional form to the data, and \
 generates plots of the fitted curve along with select eigenvectors visualized on a \
 grid of spatial points.
 """
