@@ -14,7 +14,7 @@ def read_two_columns_text(volumes_energies: str) -> np.ndarray:
         data = np.loadtxt(volumes_energies).T
         return data
     except OSError as e:
-        raise OSError(f"File {filename} cannot be found for reading.") from e
+        raise OSError(f"File {volumes_energies} cannot be found for reading.") from e
 
 
 if __name__ == "__main__":
