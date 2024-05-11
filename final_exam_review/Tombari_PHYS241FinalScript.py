@@ -1,5 +1,5 @@
 """
-SCRIPT NOT FINISHED (I emailed you about it): This script reads data from a file, fits a specified functional form to the data, and \
+This script reads data from a file, fits a specified functional form to the data, and \
 generates plots of the fitted curve along with select eigenvectors visualized on a \
 grid of spatial points.
 """
@@ -34,13 +34,13 @@ def parse_file_name(file_name):
 
 def main():
     """Part One: Fit an Equation of State."""
-    
+
     # Parse the file name
     # file_name = 'final_exam_review/Pt.Fm-3m.GGA-PBE.volumes_energies.dat'
     file_name = 'Pt.Fm-3m.GGA-PBE.volumes_energies.dat'
     chemical_symbol, crystal_symmetry_symbol, \
     functional_exchance_correlation_approximation = parse_file_name(file_name)
-    
+
     # Read in the data into a NumPy array.
     data = read_two_columns_text(file_name)
 
@@ -53,7 +53,7 @@ def main():
     # Pull out the statistics on the data set
     mean_y, standard_deviation_y, minimum_x_value, maximum_x_value, minimum_y_value, \
     maximum_y_value = calculate_bivariate_statistics(data)
-    
+
     # Pass the fit quadratic coefficients and the data to the fit_eos function
     eos_fit_curve, eos_parameters = fit_eos(data[0], data[1], fit_coefficients[::-1], \
     eos='vinet')
@@ -61,13 +61,15 @@ def main():
     # Convert the units of the data and fit
     converted_volume = convert_units(data[0], 'cubic_bohr/atom', 'cubic_angstrom/atom')
     converted_energy = convert_units(data[1], 'rydberg/atom', 'electron_volts/atom')
-    converted_bulk_modulus = convert_units(eos_parameters[2], 'rydberg/cubic_bohr', 'gigapascals')
+    converted_bulk_modulus = convert_units(eos_parameters[2], 'rydberg/cubic_bohr',\
+    'gigapascals')
     converted_fit = convert_units(eos_fit_curve, 'rydberg/atom', 'electron_volts/atom')
 
     # Plot the data and the fit curve
     plt.figure()
     plt.plot(converted_volume, converted_energy, 'bo', label='Data Points')
-    plt.plot(np.linspace(converted_volume[0], converted_volume[-1], len(eos_fit_curve)), converted_fit, 'k-', label='Fit Curve')
+    plt.plot(np.linspace(converted_volume[0], converted_volume[-1], \
+    len(eos_fit_curve)), converted_fit, 'k-', label='Fit Curve')
 
     # Set the axes limits
     plt.xlim(min(data[0]) - 0.1 * (max(data[0]) - min(data[0])), max(data[0]) + 0.1 * \
@@ -104,7 +106,7 @@ def main():
     else:
         plt.savefig('Tombari.{chemical_symbol}.{crystal_symmetry_symbol}.{functional_exchance_correlation_approximation}EquationOfState.png')
 
-    
+
     """Part Two: Visualize Vectors in Space"""
 
     # Generate the matrix with given data
@@ -134,7 +136,7 @@ def main():
     plt.legend()
     annotate_plot({'created by': {'text': f'Created by Kaitlyn Tombari on \
     {datetime.datetime.now().isoformat()}', 'position': (0.1, 0.1)}})
-             
+
     # Display or save the plot
 display_graph = True
 if display_graph:
@@ -145,4 +147,3 @@ else:
 
 if __name__ == "__main__":
     main()
-    
