@@ -34,7 +34,10 @@ def convert_units(value, from_units, to_units):
 
 
 if __name__ == "__main__":
-    print("1 cubic bohr per atom equals", convert_units(1, 'cubic_bohr/atom', 'cubic_angstrom/atom'), "cubic angstroms per atom")
-    print("1 rydberg per atom equals", convert_units(1, 'rydberg/atom', 'electron_volts/atom'), "electron volts per atom")
-    print("1 rydberg per cubic bohr equals", convert_units(1, 'rydberg/cubic_bohr', 'gigapascals'), "gigapascals")
+    print("1 cubic bohr per atom equals", convert_units(1, 'cubic_bohr/atom', \
+    'cubic_angstrom/atom'), "cubic angstroms per atom")
+    print("1 rydberg per atom equals", convert_units(1, 'rydberg/atom',\
+    'electron_volts/atom'), "electron volts per atom")
+    print("1 rydberg per cubic bohr equals", \
+    convert_units(1, 'rydberg/cubic_bohr', 'gigapascals'), "gigapascals")
     
